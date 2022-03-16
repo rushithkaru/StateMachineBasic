@@ -1,5 +1,5 @@
 #pragma once
-#include "Light.h"
+//#include "Light.h"
 
 // Forward declaration to resolve circular dependency/include
 class Light;
