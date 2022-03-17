@@ -1,18 +1,34 @@
 #pragma once
 #include "LightState.h"
 
+
 class Light
 {
 public:
 	Light();
-	// Same as before
-	inline LightState* getCurrentState() const { return currentState; }
-	// In here, we'll delegate the state transition to the currentState
 	void toggle();
-	// This will get called by the current state
-	void setState(LightState& newState);
+	inline LightState getCurrentState() const { return currentState; }
+	void printCurrentState() const {
+		if (currentState == LightState::Off){
+			printf("currently off \n");
+		}
+		if (currentState == LightState::Low){
+			printf("currently Low \n");
+		}
+		if (currentState == LightState::Medium){
+			printf("currently Medium \n");
+		}
+		if (currentState == LightState::High){
+			printf("currently High \n");
+		}
+	}
 
 private:
-	// LightState here is now a class, not the enum that we saw earlier
-	LightState* currentState;
+	LightState currentState;
+	std::map<LightState, LightState> lightTransitions = {
+	{LightState::Off, LightState::Low},
+	{LightState::Low, LightState::Medium},
+	{LightState::Medium, LightState::High},
+	{LightState::High, LightState::Off}
+};
 };

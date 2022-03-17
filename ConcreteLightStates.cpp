@@ -1,4 +1,4 @@
-#include "ConcreteLightStates.h"
+/*#include "ConcreteLightStates.h"
 #include <iostream>
 
 void LightOff::toggle(Light* light)
@@ -48,4 +48,4 @@ LightState& HighIntensity::getInstance()
 {
 	static HighIntensity singleton;
 	return singleton;
-}
+}*/

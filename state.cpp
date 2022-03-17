@@ -1,13 +1,14 @@
 #include "Light.h" 
-#include "ConcreteLightStates.h"
+#include "LightState.h"
 #include <iostream>
 
 int main() { 
     
+
     Light light; 
-    /*light.setState(LowIntensity::getInstance()); 
-    light.setState(HighIntensity::getInstance()); 
-    light.toggle();*/
+    for (int i = 0; i < 10 ; i++){
+        light.toggle();
+    }
     
     return 0; 
 } 

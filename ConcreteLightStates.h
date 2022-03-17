@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include "LightState.h"
 #include "Light.h"
 
@@ -56,4 +56,4 @@ private:
 	HighIntensity() {}
 	HighIntensity(const HighIntensity& other);
 	HighIntensity& operator=(const HighIntensity& other);
-};
+};*/
